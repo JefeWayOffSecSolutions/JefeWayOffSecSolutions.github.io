@@ -1,19 +1,14 @@
 /* Styles/MainPage/main-page.css */
 
 /* --- General Body and Container Styles --- */
+/* Note: body's display, flex-direction etc. are now handled by .page-container in site-wide.css */
 body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased; /* Smoothes out font edges for better appearance */
     -moz-osx-font-smoothing: grayscale; /* Similar smoothing for Firefox */
     color: #333333; /* Dark gray for general body text for better visibility on light backgrounds */
-    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
-    display: flex; /* Makes the body a flex container */
-    flex-direction: column; /* Stacks children (header, main, footer) vertically */
-    align-items: center; /* Centers children horizontally within the flex column */
-    justify-content: center; /* Centers children vertically within the flex column */
-    padding: 1rem; /* Adds padding around the content (1rem = 16px) */
-    /* Background color can be set here or in a more general site-wide.css if it's consistent */
-    /* background-color: #1a202c; */
+    /* min-height, display, flex-direction, align-items, justify-content, padding are moved to .page-container in site-wide.css */
+    /* This body rule primarily sets font and default text color if not overridden by more specific rules */
 }
 
 /* --- Header Styles --- */
@@ -125,47 +120,23 @@ body {
     }
 }
 
-/* --- Navigation Links Styles --- */
+/* --- Navigation Links Styles (These were removed from HTML, so their CSS is commented out) --- */
+/*
 .main-nav {
-    display: flex; /* Makes it a flex container */
-    flex-direction: column; /* Stacks buttons vertically by default */
-    gap: 1.5rem; /* Adds space between buttons (equivalent to gap-6) */
-    margin-top: 2rem; /* Adds space above the navigation section (equivalent to mt-8) */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
-
-/* Responsive adjustments for navigation: */
-@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
+@media (min-width: 768px) {
     .main-nav {
-        flex-direction: row; /* Arranges buttons horizontally on medium screens and up */
+        flex-direction: row;
     }
 }
-
-.nav-button {
-    background-color: #4A90E2; /* A shade of blue for button background */
-    color: #FFFFFF; /* White text for buttons, ensuring good contrast on dark background */
-    padding: 1rem 2rem; /* Internal spacing within the button */
-    border-radius: 0.75rem; /* Rounds the button corners (equivalent to rounded-xl) */
-    text-decoration: none; /* Removes the default underline from links */
-    font-weight: 600; /* Semi-bold font weight */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effects */
-    border: 2px solid #306BD6; /* Button border */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
-    white-space: nowrap; /* Prevents the button text from wrapping to the next line */
-    text-align: center; /* Ensures text is centered within the button */
-    display: block; /* Makes the anchor tag behave like a block element, filling available width */
-}
-
-.nav-button:hover {
-    background-color: #306BD6; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
-}
-
-.nav-button:active {
-    background-color: #255BA3; /* Even darker blue when clicked */
-    transform: translateY(0); /* Returns to original position when clicked */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
-}
+.nav-button { ... }
+.nav-button:hover { ... }
+.nav-button:active { ... }
+*/
 
 /* --- Footer Styles --- */
 .site-footer {

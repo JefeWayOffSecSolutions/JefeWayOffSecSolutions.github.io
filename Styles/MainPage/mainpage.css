@@ -3,155 +3,156 @@
 /* --- General Body and Container Styles --- */
 body {
     font-family: 'Inter', sans-serif;
-    -webkit-font-smoothing: antialiased; /* antialiased */
-    -moz-osx-font-smoothing: grayscale; /* antialiased for Firefox */
-    color: #FFFFFF; /* Initial text color set to white for better visibility */
-    min-height: 100vh; /* min-h-screen - Ensures body takes at least full viewport height */
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col - Stacks children vertically */
-    align-items: center; /* items-center - Centers children horizontally in the flex column */
-    justify-content: center; /* justify-center - Centers children vertically in the flex column */
-    padding: 1rem; /* p-4 - Adds padding around the content (1rem = 16px) */
+    -webkit-font-smoothing: antialiased; /* Smoothes out font edges for better appearance */
+    -moz-osx-font-smoothing: grayscale; /* Similar smoothing for Firefox */
+    color: #333333; /* Dark gray for general body text for better visibility on light backgrounds */
+    min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+    display: flex; /* Makes the body a flex container */
+    flex-direction: column; /* Stacks children (header, main, footer) vertically */
+    align-items: center; /* Centers children horizontally within the flex column */
+    justify-content: center; /* Centers children vertically within the flex column */
+    padding: 1rem; /* Adds padding around the content (1rem = 16px) */
     /* Background color can be set here or in a more general site-wide.css if it's consistent */
     /* background-color: #1a202c; */
 }
 
 /* --- Header Styles --- */
 .site-header {
-    text-align: center; /* text-center - Centers text within the header */
-    margin-bottom: 3rem; /* mb-12 - Adds space below the header (12 * 0.25rem = 3rem) */
+    text-align: center; /* Centers text within the header */
+    margin-bottom: 3rem; /* Adds space below the header (equivalent to Tailwind's mb-12) */
 }
 
 .page-title {
-    font-size: 4rem; /* Initial text-6xl (96px, 6rem) - Adjusted default for better flow */
-    font-weight: 900; /* font-extrabold - Makes text extra bold */
-    margin-bottom: 0.5rem; /* mb-2 - Adds space below the title */
-    color: #39FF14; /* Bright Green / Electric Lime - As requested */
-    /* Add any 3D text specific properties here from shared/3d-text.css if it applies only to this title */
+    font-size: 4rem; /* Base font size for the main title (e.g., text-6xl for smaller screens) */
+    font-weight: 900; /* Makes text extra bold (equivalent to font-extrabold) */
+    margin-bottom: 0.5rem; /* Adds space below the title (equivalent to mb-2) */
+    color: #008000; /* Darker Green - for improved visibility */
+    /* If you have 3D text styling in 3d-text.css that applies specifically to this,
+       ensure that file is linked before this one in HTML, or move relevant styles here. */
 }
 
-/* Responsive adjustments for page-title */
-@media (min-width: 768px) { /* md:text-7xl - Applies on medium screens and up */
+/* Responsive adjustments for page-title: */
+@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
     .page-title {
-        font-size: 5rem; /* 7xl (112px, 7rem) */
+        font-size: 5rem; /* Larger font size for medium screens (equivalent to text-7xl) */
     }
 }
-@media (min-width: 1024px) { /* lg:text-8xl - Applies on large screens and up */
+@media (min-width: 1024px) { /* Applies on large screens and up (lg: prefix in Tailwind) */
     .page-title {
-        font-size: 6rem; /* 8xl (128px, 8rem) */
+        font-size: 6rem; /* Even larger font size for large screens (equivalent to text-8xl) */
     }
 }
 
 .subtitle {
-    font-size: 1.25rem; /* text-xl */
-    font-weight: 600; /* font-semibold */
-    margin-bottom: 0.25rem; /* mb-1 */
-    color: #FF073A; /* Bright Red - As requested */
+    font-size: 1.25rem; /* Base font size for the subtitle (e.g., text-xl) */
+    font-weight: 600; /* Semi-bold font weight (equivalent to font-semibold) */
+    margin-bottom: 0.25rem; /* Adds space below the subtitle (equivalent to mb-1) */
+    color: #A00000; /* Darker Red - for improved visibility */
 }
 
-/* Responsive adjustments for subtitle */
-@media (min-width: 768px) { /* md:text-2xl */
+/* Responsive adjustments for subtitle: */
+@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
     .subtitle {
-        font-size: 1.5rem; /* 2xl */
+        font-size: 1.5rem; /* Larger font size for medium screens (equivalent to text-2xl) */
     }
 }
-@media (min-width: 1024px) { /* lg:text-3xl */
+@media (min-width: 1024px) { /* Applies on large screens and up (lg: prefix in Tailwind) */
     .subtitle {
-        font-size: 1.875rem; /* 3xl */
+        font-size: 1.875rem; /* Even larger font size for large screens (equivalent to text-3xl) */
     }
 }
 
 .tagline {
-    font-size: 1.125rem; /* text-lg */
-    font-weight: 500; /* font-medium */
-    color: #FF073A; /* Bright Red - As requested */
+    font-size: 1.125rem; /* Base font size for the tagline (e.g., text-lg) */
+    font-weight: 500; /* Medium font weight (equivalent to font-medium) */
+    color: #A00000; /* Darker Red - for improved visibility */
 }
 
-/* Responsive adjustments for tagline */
-@media (min-width: 768px) { /* md:text-xl */
+/* Responsive adjustments for tagline: */
+@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
     .tagline {
-        font-size: 1.25rem; /* xl */
+        font-size: 1.25rem; /* Larger font size for medium screens (equivalent to text-xl) */
     }
 }
-@media (min-width: 1024px) { /* lg:text-2xl */
+@media (min-width: 1024px) { /* Applies on large screens and up (lg: prefix in Tailwind) */
     .tagline {
-        font-size: 1.5rem; /* 2xl */
+        font-size: 1.5rem; /* Even larger font size for large screens (equivalent to text-2xl) */
     }
 }
 
 /* --- Main Content Area Styles --- */
 .main-content-wrapper {
-    width: 100%; /* w-full - Takes full available width */
-    max-width: 80rem; /* max-w-5xl (Tailwind's 5xl is 64rem/1280px; 80rem is a bit larger) */
-    background-color: rgba(255, 255, 255, 0.1); /* bg-white bg-opacity-10 - Semi-transparent white background */
-    backdrop-filter: blur(4px); /* backdrop-blur-sm - Applies a blur effect to content behind this element */
-    border-radius: 1.5rem; /* rounded-3xl - Creates rounded corners */
-    padding: 2rem; /* p-8 - Adds internal spacing (padding) */
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl - Creates a large drop shadow */
-    border: 1px solid rgba(79, 70, 229, 0.3); /* border border-indigo-700/30 - Adds a semi-transparent indigo border */
-    display: flex; /* flex - Makes it a flex container */
-    flex-direction: column; /* flex-col - Stacks its children vertically */
-    align-items: center; /* items-center - Centers children horizontally */
-    gap: 2rem; /* gap-8 - Adds space between flex items (sections) */
+    width: 100%; /* Ensures it takes full available width */
+    max-width: 80rem; /* Sets a maximum width (equivalent to Tailwind's max-w-5xl, approximately 1280px) */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background with increased opacity */
+    backdrop-filter: blur(4px); /* Applies a blur effect to content behind this element (equivalent to backdrop-blur-sm) */
+    border-radius: 1.5rem; /* Rounds the corners (equivalent to rounded-3xl) */
+    padding: 2rem; /* Adds internal spacing (equivalent to p-8) */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Creates a large drop shadow (equivalent to shadow-2xl) */
+    border: 1px solid rgba(79, 70, 229, 0.3); /* Adds a semi-transparent indigo border (equivalent to border border-indigo-700/30) */
+    display: flex; /* Makes it a flex container */
+    flex-direction: column; /* Stacks its children (sections) vertically */
+    align-items: center; /* Centers children horizontally within the flex column */
+    gap: 2rem; /* Adds space between flex items (equivalent to gap-8) */
 }
 
 /* --- Mission Statement Section Styles --- */
 .mission-section {
-    text-align: center; /* text-center - Centers text within the section */
-    margin-bottom: 2rem; /* mb-8 - Adds space below the mission section */
+    text-align: center; /* Centers text within the section */
+    margin-bottom: 2rem; /* Adds space below the mission section (equivalent to mb-8) */
 }
 
 .section-title {
-    font-size: 2.25rem; /* text-4xl */
-    font-weight: 700; /* font-bold */
-    color: #6366F1; /* indigo-300 - Original color for this title */
-    margin-bottom: 1.5rem; /* mb-6 */
+    font-size: 2.25rem; /* Font size for the section title (equivalent to text-4xl) */
+    font-weight: 700; /* Bold font weight (equivalent to font-bold) */
+    color: #3f51b5; /* Darker Indigo - for improved visibility */
+    margin-bottom: 1.5rem; /* Adds space below the section title (equivalent to mb-6) */
 }
 
 .mission-text {
-    font-size: 1.25rem; /* text-xl */
-    color: #00BFFF; /* Deep Sky Blue - As requested */
-    line-height: 1.625; /* leading-relaxed - Increases line spacing */
-    max-width: 48rem; /* max-w-3xl (Tailwind's 3xl is 48rem/768px) */
-    margin-left: auto; /* Used with max-width to center the block */
-    margin-right: auto; /* Used with max-width to center the block */
+    font-size: 1.25rem; /* Base font size for the mission text (e.g., text-xl) */
+    color: #000080; /* Dark Blue - for improved visibility */
+    line-height: 1.625; /* Increases line spacing (equivalent to leading-relaxed) */
+    max-width: 48rem; /* Sets a maximum width for the text block (equivalent to Tailwind's max-w-3xl) */
+    margin-left: auto; /* Used with max-width to center the block on the page */
+    margin-right: auto; /* Used with max-width to center the block on the page */
 }
 
-/* Responsive adjustments for mission-text */
-@media (min-width: 768px) { /* md:text-2xl */
+/* Responsive adjustments for mission-text: */
+@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
     .mission-text {
-        font-size: 1.5rem; /* 2xl */
+        font-size: 1.5rem; /* Larger font size for medium screens (equivalent to text-2xl) */
     }
 }
 
 /* --- Navigation Links Styles --- */
 .main-nav {
-    display: flex; /* flex */
-    flex-direction: column; /* flex-col - Stacks buttons vertically by default */
-    gap: 1.5rem; /* gap-6 - Space between buttons */
-    margin-top: 2rem; /* mt-8 - Space above navigation */
+    display: flex; /* Makes it a flex container */
+    flex-direction: column; /* Stacks buttons vertically by default */
+    gap: 1.5rem; /* Adds space between buttons (equivalent to gap-6) */
+    margin-top: 2rem; /* Adds space above the navigation section (equivalent to mt-8) */
 }
 
-/* Responsive adjustments for navigation */
-@media (min-width: 768px) { /* md:flex-row - On medium screens and up, arrange buttons horizontally */
+/* Responsive adjustments for navigation: */
+@media (min-width: 768px) { /* Applies on medium screens and up (md: prefix in Tailwind) */
     .main-nav {
-        flex-direction: row;
+        flex-direction: row; /* Arranges buttons horizontally on medium screens and up */
     }
 }
 
 .nav-button {
-    background-color: #4A90E2; /* A shade of blue for buttons */
-    color: #FFFFFF; /* White text for buttons */
-    padding: 1rem 2rem; /* Internal spacing */
-    border-radius: 0.75rem; /* rounded-xl - Rounded corners for buttons */
-    text-decoration: none; /* Removes underline from links */
-    font-weight: 600; /* semi-bold */
+    background-color: #4A90E2; /* A shade of blue for button background */
+    color: #FFFFFF; /* White text for buttons, ensuring good contrast on dark background */
+    padding: 1rem 2rem; /* Internal spacing within the button */
+    border-radius: 0.75rem; /* Rounds the button corners (equivalent to rounded-xl) */
+    text-decoration: none; /* Removes the default underline from links */
+    font-weight: 600; /* Semi-bold font weight */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effects */
     border: 2px solid #306BD6; /* Button border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
-    white-space: nowrap; /* Prevent button text from wrapping */
-    text-align: center; /* Ensure text is centered within the button */
-    display: block; /* Make the anchor fill available space if flex container allows */
+    white-space: nowrap; /* Prevents the button text from wrapping to the next line */
+    text-align: center; /* Ensures text is centered within the button */
+    display: block; /* Makes the anchor tag behave like a block element, filling available width */
 }
 
 .nav-button:hover {
@@ -162,14 +163,14 @@ body {
 
 .nav-button:active {
     background-color: #255BA3; /* Even darker blue when clicked */
-    transform: translateY(0); /* Return to original position when clicked */
+    transform: translateY(0); /* Returns to original position when clicked */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
 }
 
 /* --- Footer Styles --- */
 .site-footer {
-    margin-top: 3rem; /* mt-12 - Space above the footer */
-    text-align: center; /* text-center - Centers footer text */
-    color: #A0AEC0; /* text-gray-400 (Tailwind's gray-400 is #A0AEC0) */
-    font-size: 0.875rem; /* text-sm */
+    margin-top: 3rem; /* Adds space above the footer (equivalent to mt-12) */
+    text-align: center; /* Centers footer text */
+    color: #555555; /* Darker gray for footer text - for improved visibility */
+    font-size: 0.875rem; /* Font size for footer text (equivalent to text-sm) */
 }

@@ -1,0 +1,22 @@
+/* Styles/MainPage/main-page.css */
+
+/* This file contains styles specific to the main.html (Home) page. */
+
+/* Styles for the main content container on the home page */
+main {
+    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
+    /* This file is primarily for future expansion or overrides */
+}
+
+/* Styles for the mission statement section */
+section {
+    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
+}
+
+/* Styles for the navigation links container */
+nav {
+    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
+}
+
+/* You can add more specific styles for elements unique to main.html here */
+/* For example, if you add a new image or a custom component only on the home page */

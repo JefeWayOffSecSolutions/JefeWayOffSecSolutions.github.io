@@ -1,18 +1,14 @@
 /* Styles/AIAssistantPage/ai-assistant-page.css */
 
 /* --- General Body and Container Styles for a Light Background --- */
+/* Note: body's display, flex-direction etc. are now handled by .page-container in site-wide.css */
 body {
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #F8F8F8; /* Very light gray/almost white background */
     color: #333333; /* Dark gray for general body text for better visibility */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
+    /* min-height, display, flex-direction, align-items, justify-content, padding are handled by .page-container in site-wide.css */
 }
 
 /* --- Header Styles --- */
@@ -48,12 +44,14 @@ body {
     }
 }
 
-.back-button-ai { /* New class for the back button */
-    display: inline-block; /* inline-block */
-    margin-top: 1rem; /* mt-4 */
-    padding: 0.5rem 1rem; /* Example padding for better visibility as a button/link */
-    background-color: #6a6a6a; /* A darker gray for contrast */
-    color: #FFFFFF; /* White text */
+/* Removed back-button-ai styling, as it's replaced by the sidebar navigation */
+/*
+.back-button-ai {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #6a6a6a;
+    color: #FFFFFF;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -62,6 +60,7 @@ body {
 .back-button-ai:hover {
     background-color: #4a4a4a;
 }
+*/
 
 /* --- Main Content Area Styles --- */
 .main-content-wrapper-ai { /* New class for AI assistant main wrapper */

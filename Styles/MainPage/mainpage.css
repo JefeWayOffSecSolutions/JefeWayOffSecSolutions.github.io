@@ -1,22 +1,58 @@
 /* Styles/MainPage/main-page.css */
 
-/* This file contains styles specific to the main.html (Home) page. */
-
-/* Styles for the main content container on the home page */
-main {
-    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
-    /* This file is primarily for future expansion or overrides */
+/* 1. Make the text less translucent and more visible */
+/* This targets all text within the body, making it fully opaque white. */
+body {
+    color: #FFFFFF !important; /* White color, !important to override Tailwind's text-gray-100 */
+    opacity: 1 !important; /* Ensure full opacity for all text */
 }
 
-/* Styles for the mission statement section */
-section {
-    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
+/* Ensure the main content section text is also fully opaque and visible */
+.mission-text {
+    color: #FFFFFF !important; /* White color for the mission text itself */
+    opacity: 1 !important;
 }
 
-/* Styles for the navigation links container */
-nav {
-    /* No specific styles needed here as Tailwind classes are sufficient in HTML */
+/* 2. Make the title "Jefe Way Offensive Security Company" Lime or Bright Green */
+.page-title {
+    color: #39FF14 !important; /* Bright Green / Electric Lime */
 }
 
-/* You can add more specific styles for elements unique to main.html here */
-/* For example, if you add a new image or a custom component only on the home page */
+/* 3. Make the next lines (subtitle and tagline) bright red */
+.subtitle {
+    color: #FF073A !important; /* Bright Red */
+}
+
+.tagline {
+    color: #FF073A !important; /* Bright Red */
+}
+
+/* 4. Make the Mission statement a bright shade of blue. */
+.mission-text {
+    color: #00BFFF !important; /* Deep Sky Blue */
+}
+
+/* Navigation button styling - enhancing visibility */
+.nav-button {
+    background-color: #4A90E2; /* A shade of blue for buttons */
+    color: #FFFFFF; /* White text for buttons */
+    padding: 1rem 2rem;
+    border-radius: 0.75rem; /* rounded-xl */
+    text-decoration: none;
+    font-weight: 600; /* semi-bold */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid #306BD6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+    background-color: #306BD6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-button:active {
+    background-color: #255BA3;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

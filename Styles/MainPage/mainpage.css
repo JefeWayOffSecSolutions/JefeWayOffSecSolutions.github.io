@@ -1,58 +1,175 @@
 /* Styles/MainPage/main-page.css */
 
-/* 1. Make the text less translucent and more visible */
-/* This targets all text within the body, making it fully opaque white. */
+/* --- General Body and Container Styles --- */
 body {
-    color: #FFFFFF !important; /* White color, !important to override Tailwind's text-gray-100 */
-    opacity: 1 !important; /* Ensure full opacity for all text */
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased; /* antialiased */
+    -moz-osx-font-smoothing: grayscale; /* antialiased for Firefox */
+    color: #FFFFFF; /* Initial text color set to white for better visibility */
+    min-height: 100vh; /* min-h-screen - Ensures body takes at least full viewport height */
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col - Stacks children vertically */
+    align-items: center; /* items-center - Centers children horizontally in the flex column */
+    justify-content: center; /* justify-center - Centers children vertically in the flex column */
+    padding: 1rem; /* p-4 - Adds padding around the content (1rem = 16px) */
+    /* Background color can be set here or in a more general site-wide.css if it's consistent */
+    /* background-color: #1a202c; */
 }
 
-/* Ensure the main content section text is also fully opaque and visible */
-.mission-text {
-    color: #FFFFFF !important; /* White color for the mission text itself */
-    opacity: 1 !important;
+/* --- Header Styles --- */
+.site-header {
+    text-align: center; /* text-center - Centers text within the header */
+    margin-bottom: 3rem; /* mb-12 - Adds space below the header (12 * 0.25rem = 3rem) */
 }
 
-/* 2. Make the title "Jefe Way Offensive Security Company" Lime or Bright Green */
 .page-title {
-    color: #39FF14 !important; /* Bright Green / Electric Lime */
+    font-size: 4rem; /* Initial text-6xl (96px, 6rem) - Adjusted default for better flow */
+    font-weight: 900; /* font-extrabold - Makes text extra bold */
+    margin-bottom: 0.5rem; /* mb-2 - Adds space below the title */
+    color: #39FF14; /* Bright Green / Electric Lime - As requested */
+    /* Add any 3D text specific properties here from shared/3d-text.css if it applies only to this title */
 }
 
-/* 3. Make the next lines (subtitle and tagline) bright red */
+/* Responsive adjustments for page-title */
+@media (min-width: 768px) { /* md:text-7xl - Applies on medium screens and up */
+    .page-title {
+        font-size: 5rem; /* 7xl (112px, 7rem) */
+    }
+}
+@media (min-width: 1024px) { /* lg:text-8xl - Applies on large screens and up */
+    .page-title {
+        font-size: 6rem; /* 8xl (128px, 8rem) */
+    }
+}
+
 .subtitle {
-    color: #FF073A !important; /* Bright Red */
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.25rem; /* mb-1 */
+    color: #FF073A; /* Bright Red - As requested */
+}
+
+/* Responsive adjustments for subtitle */
+@media (min-width: 768px) { /* md:text-2xl */
+    .subtitle {
+        font-size: 1.5rem; /* 2xl */
+    }
+}
+@media (min-width: 1024px) { /* lg:text-3xl */
+    .subtitle {
+        font-size: 1.875rem; /* 3xl */
+    }
 }
 
 .tagline {
-    color: #FF073A !important; /* Bright Red */
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+    color: #FF073A; /* Bright Red - As requested */
 }
 
-/* 4. Make the Mission statement a bright shade of blue. */
+/* Responsive adjustments for tagline */
+@media (min-width: 768px) { /* md:text-xl */
+    .tagline {
+        font-size: 1.25rem; /* xl */
+    }
+}
+@media (min-width: 1024px) { /* lg:text-2xl */
+    .tagline {
+        font-size: 1.5rem; /* 2xl */
+    }
+}
+
+/* --- Main Content Area Styles --- */
+.main-content-wrapper {
+    width: 100%; /* w-full - Takes full available width */
+    max-width: 80rem; /* max-w-5xl (Tailwind's 5xl is 64rem/1280px; 80rem is a bit larger) */
+    background-color: rgba(255, 255, 255, 0.1); /* bg-white bg-opacity-10 - Semi-transparent white background */
+    backdrop-filter: blur(4px); /* backdrop-blur-sm - Applies a blur effect to content behind this element */
+    border-radius: 1.5rem; /* rounded-3xl - Creates rounded corners */
+    padding: 2rem; /* p-8 - Adds internal spacing (padding) */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* shadow-2xl - Creates a large drop shadow */
+    border: 1px solid rgba(79, 70, 229, 0.3); /* border border-indigo-700/30 - Adds a semi-transparent indigo border */
+    display: flex; /* flex - Makes it a flex container */
+    flex-direction: column; /* flex-col - Stacks its children vertically */
+    align-items: center; /* items-center - Centers children horizontally */
+    gap: 2rem; /* gap-8 - Adds space between flex items (sections) */
+}
+
+/* --- Mission Statement Section Styles --- */
+.mission-section {
+    text-align: center; /* text-center - Centers text within the section */
+    margin-bottom: 2rem; /* mb-8 - Adds space below the mission section */
+}
+
+.section-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    color: #6366F1; /* indigo-300 - Original color for this title */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
 .mission-text {
-    color: #00BFFF !important; /* Deep Sky Blue */
+    font-size: 1.25rem; /* text-xl */
+    color: #00BFFF; /* Deep Sky Blue - As requested */
+    line-height: 1.625; /* leading-relaxed - Increases line spacing */
+    max-width: 48rem; /* max-w-3xl (Tailwind's 3xl is 48rem/768px) */
+    margin-left: auto; /* Used with max-width to center the block */
+    margin-right: auto; /* Used with max-width to center the block */
 }
 
-/* Navigation button styling - enhancing visibility */
+/* Responsive adjustments for mission-text */
+@media (min-width: 768px) { /* md:text-2xl */
+    .mission-text {
+        font-size: 1.5rem; /* 2xl */
+    }
+}
+
+/* --- Navigation Links Styles --- */
+.main-nav {
+    display: flex; /* flex */
+    flex-direction: column; /* flex-col - Stacks buttons vertically by default */
+    gap: 1.5rem; /* gap-6 - Space between buttons */
+    margin-top: 2rem; /* mt-8 - Space above navigation */
+}
+
+/* Responsive adjustments for navigation */
+@media (min-width: 768px) { /* md:flex-row - On medium screens and up, arrange buttons horizontally */
+    .main-nav {
+        flex-direction: row;
+    }
+}
+
 .nav-button {
     background-color: #4A90E2; /* A shade of blue for buttons */
     color: #FFFFFF; /* White text for buttons */
-    padding: 1rem 2rem;
-    border-radius: 0.75rem; /* rounded-xl */
-    text-decoration: none;
+    padding: 1rem 2rem; /* Internal spacing */
+    border-radius: 0.75rem; /* rounded-xl - Rounded corners for buttons */
+    text-decoration: none; /* Removes underline from links */
     font-weight: 600; /* semi-bold */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid #306BD6;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effects */
+    border: 2px solid #306BD6; /* Button border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Button shadow */
+    white-space: nowrap; /* Prevent button text from wrapping */
+    text-align: center; /* Ensure text is centered within the button */
+    display: block; /* Make the anchor fill available space if flex container allows */
 }
 
 .nav-button:hover {
-    background-color: #306BD6;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: #306BD6; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
 }
 
 .nav-button:active {
-    background-color: #255BA3;
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #255BA3; /* Even darker blue when clicked */
+    transform: translateY(0); /* Return to original position when clicked */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Smaller shadow when clicked */
+}
+
+/* --- Footer Styles --- */
+.site-footer {
+    margin-top: 3rem; /* mt-12 - Space above the footer */
+    text-align: center; /* text-center - Centers footer text */
+    color: #A0AEC0; /* text-gray-400 (Tailwind's gray-400 is #A0AEC0) */
+    font-size: 0.875rem; /* text-sm */
 }

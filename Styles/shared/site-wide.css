@@ -1,0 +1,97 @@
+/* Styles/shared/site-wide.css */
+
+/* --- Centralized Page Link Style --- */
+.page-link {
+    color: #000000; /* Black text for visibility on light backgrounds by default */
+    text-decoration: none; /* No underline by default */
+    font-weight: 500; /* Medium font weight */
+    transition: color 0.2s ease, text-decoration 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.page-link:hover {
+    color: #0000FF; /* Blue on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.page-link:active {
+    color: #0000AA; /* Darker blue when clicked */
+    text-decoration: underline; /* Underline when active */
+}
+
+/* --- General Layout for pages with a sidebar --- */
+.page-container {
+    display: flex; /* Makes the body a flex container for sidebar + main content area */
+    min-height: 100vh; /* Ensures the page takes at least the full height of the viewport */
+    width: 100%; /* Ensure it spans full width */
+}
+
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    padding: 1.5rem; /* Internal spacing within the sidebar */
+    display: flex;
+    flex-direction: column; /* Stacks sidebar content vertically */
+    gap: 1rem; /* Space between sidebar items */
+    position: sticky; /* Makes sidebar stick to the top when scrolling */
+    top: 0; /* Aligns sticky element to the top of the viewport */
+    height: 100vh; /* Makes sidebar full height of the viewport */
+    overflow-y: auto; /* Enables vertical scrolling for sidebar content if it overflows */
+}
+
+.sidebar-nav-list {
+    list-style: none; /* Remove bullet points from list items */
+    padding: 0; /* Remove default list padding */
+    margin: 0; /* Remove default list margin */
+    display: flex;
+    flex-direction: column; /* Stacks list items vertically */
+    gap: 0.75rem; /* Space between list items */
+}
+
+.sidebar-nav-list li {
+    margin: 0; /* Ensures no extra margin on list items */
+}
+
+.main-content-area {
+    flex-grow: 1; /* Allows main content to take up all remaining horizontal space */
+    padding: 1rem; /* General padding around the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally within the main area */
+    justify-content: center; /* Centers content vertically within the main area (adjust if content needs to align top) */
+    width: calc(100% - 250px); /* Calculates width to account for the fixed sidebar width */
+}
+
+/* Specific sidebar theme for dark background pages (e.g., Main Page) */
+.sidebar-dark-theme {
+    background-color: #1a202c; /* Dark background matching original main page theme */
+    color: #E2E8F0; /* Light text for good contrast on dark background */
+    border-right: 1px solid rgba(255, 255, 255, 0.1); /* Subtle right border */
+}
+.sidebar-dark-theme .page-link {
+    color: #99FFFF; /* Cyan for links on a dark background for visual appeal */
+}
+.sidebar-dark-theme .page-link:hover {
+    color: #00BFFF; /* Brighter blue on hover */
+    text-decoration: underline;
+}
+.sidebar-dark-theme .page-link:active {
+    color: #0080FF; /* Slightly darker blue when clicked */
+    text-decoration: underline;
+}
+
+/* Specific sidebar theme for light background pages (e.g., AI Assistant Page) */
+.sidebar-light-theme {
+    background-color: #F0F0F0; /* Light background matching AI Assistant page theme */
+    color: #333333; /* Dark text for good contrast on light background */
+    border-right: 1px solid rgba(0, 0, 0, 0.1); /* Subtle right border */
+}
+.sidebar-light-theme .page-link {
+    color: #000000; /* Black for links on a light background */
+}
+.sidebar-light-theme .page-link:hover {
+    color: #0000FF; /* Blue on hover */
+    text-decoration: underline;
+}
+.sidebar-light-theme .page-link:active {
+    color: #0000AA; /* Darker blue when clicked */
+    text-decoration: underline;
+}

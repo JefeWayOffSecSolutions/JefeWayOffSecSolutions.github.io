@@ -4,42 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jefe Way Offensive Security - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../Styles/shared/site-wide.css">
     <link rel="stylesheet" href="../../Styles/shared/3d-text.css">
     <link rel="stylesheet" href="../../Styles/MainPage/main-page.css">
 </head>
-<body class="page-container"> <div class="sidebar sidebar-dark-theme"> <h3>Navigation</h3>
-        <ul class="sidebar-nav-list">
-            <li><a href="index.html" class="page-link">Home</a></li> <li><a href="../AIAssistantPage/ai-assistant.html" class="page-link">AI Assistant</a></li>
-            <li><a href="../RepositoriesPage/repositories.html" class="page-link">Our Projects (Repositories)</a></li>
-        </ul>
-    </div>
+<body class="font-inter antialiased text-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <header class="text-center mb-12">
+        <h1 class="page-title text-6xl md:text-7xl lg:text-8xl font-extrabold mb-2 text-lime-400">
+            Jefe Way Offensive Security Company
+        </h1>
+        <p class="subtitle text-xl md:text-2xl lg:text-3xl font-semibold mb-1 text-red-500">
+            Offensively Innovating Pen Testing
+        </p>
+        <p class="tagline text-lg md:text-xl lg:text-2xl font-medium text-red-500">
+            Making it affordable for the little guy
+        </p>
+    </header>
 
-    <div class="main-content-area"> <header class="site-header">
-            <h1 class="page-title">
-                Jefe Way Offensive Security Company
-            </h1>
-            <p class="subtitle">
-                Offensively Innovating Pen Testing
+    <main class="w-full max-w-5xl bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-indigo-700/30 flex flex-col items-center gap-8">
+        <section class="text-center mb-8">
+            <h2 class="text-4xl font-bold text-indigo-600 mb-6">Our Mission</h2>
+            <p class="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
+                At Jefe Way Offensive Security Company, we are dedicated to pioneering cutting-edge solutions that empower businesses and individuals to thrive in the digital age. We believe in leveraging technology to foster innovation, enhance security, and build a more connected and efficient future.
             </p>
-            <p class="tagline">
-                Making it affordable for the little guy
-            </p>
-        </header>
+        </section>
 
-        <main class="main-content-wrapper">
-            <section class="mission-section">
-                <h2 class="section-title">Our Mission</h2>
-                <p class="mission-text">
-                    At Jefe Way Offensive Security Company, we are dedicated to pioneering cutting-edge solutions that empower businesses and individuals to thrive in the digital age. We believe in leveraging technology to foster innovation, enhance security, and build a more connected and efficient future.
-                </p>
-            </section>
-        </main>
+        <nav class="flex flex-col md:flex-row gap-6 mt-8">
+            <a href="../AIAssistantPage/ai-assistant.html" class="nav-button px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                AI Assistant
+            </a>
+            <a href="../RepositoriesPage/repositories.html" class="nav-button px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                Our Projects (Repositories)
+            </a>
+        </nav>
+    </main>
 
-        <footer class="site-footer">
-            <p>&copy; 2025 Jefe Way Offensive Security Company. All names, logos, and branding are reserved and may not be used without explicit authorization.</p>
-            <p>Applications, programs, and their underlying code are licensed separately as indicated within their respective distributions.</p>
-        </footer>
-    </div> </body>
+    <footer class="mt-12 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Jefe Way Offensive Security Company. All names, logos, and branding are reserved and may not be used without explicit authorization.</p>
+        <p>Applications, programs, and their underlying code are licensed separately as indicated within their respective distributions.</p>
+    </footer>
+</body>
 </html>

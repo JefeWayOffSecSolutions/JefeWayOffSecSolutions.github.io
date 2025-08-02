@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JefeWayCEO - rkhunter AI Assistant</title>
+    <title>Root Kit Scan Results AI Assistant</title>
     <!-- Load Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- General site-wide styling -->
-    <link rel="stylesheet" href="../../Styles/shared/site-wide.css">
+    <link rel="stylesheet" href="../Styles/shared/site-wide.css">
     <!-- 3D text effect styling -->
-    <link rel="stylesheet" href="../../Styles/shared/3d-text.css">
+    <link rel="stylesheet" href="../Styles/shared/3d-text.css">
     <!-- Page-specific styling for the AI Assistant page -->
-    <link rel="stylesheet" href="../../Styles/AIAssistantPage/ai-assistant-page.css">
+    <link rel="stylesheet" href="../Styles/AIAssistantPage/ai-assistant-page.css">
 </head>
 <body class="font-inter antialiased min-h-screen flex flex-col p-4">
     <header class="site-header-ai">
         <h1 class="page-title-ai">
-            rkhunter AI Assistant
+            Root Kit Detection Results AI Assistant
         </h1>
         <p class="page-subtitle-ai">
-            Analyze rkhunter logs for potential threats and solutions.
+            Analyze log files from your choosen RootKit Detection Software for potential solutions.
         </p>
         <!-- Corrected link to point to index.html in the root directory -->
         <a href="../../index.html" class="back-button-ai">
-            &larr; Back to Home
+            &larr; Home
         </a>
     </header>
 
     <main class="main-content-wrapper-ai">
         <section class="ai-section">
-            <h2 class="section-title-ai">Upload rkhunter Log</h2>
+            <h2 class="section-title-ai">Upload Results Here</h2>
             <p class="section-description-ai">
-                Upload your rkhunter scan log file (.log) here for analysis.
+                Upload your sofware scan file (.log) here for analysis.
             </p>
-            <input type="file" id="rkhunterLogFileInput" accept=".log" class="rkhunter-file-input"/>
+            <input type="file" id="LogFileInput" accept=".log" class=".log-file-input"/>
             <button id="analyzeLogButton" class="analyze-button">
-                Analyze Log
+                Analyze Results
             </button>
         </section>
 
         <section class="ai-section">
-            <h2 class="section-title-ai">Analysis Results</h2>
+            <h2 class="section-title-ai">Log File Results</h2>
 
             <div id="warningMessage" class="warning-message">
                 <p class="warning-title">
                     <span class="warning-star">****</span><span class="warning-exclamation">!!!!</span><span class="warning-word">WARNING</span><span class="warning-exclamation">!!!!</span><span class="warning-star">****</span>
                 </p>
                 <p class="warning-detail-text">
-                    Root Kit Hunter can reveal false positives. It is up to the user to research and make educated assessments on the results of its scans.
+                    Root Kit Detection Software results can show false positives. It is up to the user to research, educate, and determine the validity of the results of scans.
                 </p>
             </div>
 
@@ -64,7 +64,7 @@
         </section>
     </main>
 
-    <script type="module" src="../../Scripts/AIAssistantPage/rkhunter-ai-assistant.js"></script>
+    <script type="module" src="../Scripts/AIAssistantPage/rkhunter-ai-assistant.js"></script>
 
     <footer class="site-footer-ai">
         <p>&copy; 2025 Jefe Way Offensive Security Company. All names, logos, and branding are reserved and may not be used without explicit authorization.</p>

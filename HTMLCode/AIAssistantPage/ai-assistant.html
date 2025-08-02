@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JefeWayCEO - rkhunter AI Assistant</title>
+    <!-- Load Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- General site-wide styling -->
     <link rel="stylesheet" href="../../Styles/shared/site-wide.css">
+    <!-- 3D text effect styling -->
     <link rel="stylesheet" href="../../Styles/shared/3d-text.css">
+    <!-- Page-specific styling for the AI Assistant page -->
     <link rel="stylesheet" href="../../Styles/AIAssistantPage/ai-assistant-page.css">
 </head>
-<body>
+<body class="font-inter antialiased min-h-screen flex flex-col p-4">
     <header class="site-header-ai">
         <h1 class="page-title-ai">
             rkhunter AI Assistant
@@ -17,7 +23,8 @@
         <p class="page-subtitle-ai">
             Analyze rkhunter logs for potential threats and solutions.
         </p>
-        <a href="../MainPage/main.html" class="back-button-ai">
+        <!-- Corrected link to point to index.html in the root directory -->
+        <a href="../../index.html" class="back-button-ai">
             &larr; Back to Home
         </a>
     </header>

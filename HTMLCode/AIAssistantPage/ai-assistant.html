@@ -3,68 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Root Kit Scan Results AI Assistant</title>
+    <title>Rootkit Detection Software<br>
+        AI Assistant</title>
     <!-- Load Tailwind CSS for utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Inter font from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- General site-wide styling -->
+    <!-- General site-wide styling (paths updated) -->
     <link rel="stylesheet" href="../Styles/shared/site-wide.css">
-    <!-- 3D text effect styling -->
+    <!-- 3D text effect styling (paths updated) -->
     <link rel="stylesheet" href="../Styles/shared/3d-text.css">
-    <!-- Page-specific styling for the AI Assistant page -->
-    <link rel="stylesheet" href="../Styles/AIAssistantPage/ai-assistant-page.css">
+    <!-- Page-specific styling for the AI Assistant page (paths updated) -->
+    <link rel="stylesheet" href="../Styles/AIAssistantPage/rootkit-ai-assistant-page.css">
 </head>
 <body class="font-inter antialiased min-h-screen flex flex-col p-4">
     <header class="site-header-ai">
         <h1 class="page-title-ai">
-            Root Kit Detection Results AI Assistant
+            Rootkit Detection Software AI Assistant
         </h1>
         <p class="page-subtitle-ai">
-            Analyze log files from your choosen RootKit Detection Software for potential solutions.
+            Analyze any Rootkit Detection Software log for potential threats and solutions.
         </p>
-        <!-- Corrected link to point to index.html in the root directory -->
-        <a href="../../index.html" class="back-button-ai">
+        <!-- Link to the main page remains the same, as it points to index.html -->
+        <a href="../index.html" class="back-button-ai">
             &larr; Home
         </a>
     </header>
 
     <main class="main-content-wrapper-ai">
         <section class="ai-section">
-            <h2 class="section-title-ai">Upload Results Here</h2>
+            <h2 class="section-title-ai">Upload Detection Software Results</h2>
             <p class="section-description-ai">
-                Upload your sofware scan file (.log) here for analysis.
+                Upload your log file (.log) from any Rootkit Detection Software here for analysis.
             </p>
-            <input type="file" id="LogFileInput" accept=".log" class=".log-file-input"/>
+            <input type="file" id="rootkitLogFileInput" accept=".log" class="rootkit-file-input"/>
             <button id="analyzeLogButton" class="analyze-button">
-                Analyze Results
+                Analyze
             </button>
         </section>
 
         <section class="ai-section">
-            <h2 class="section-title-ai">Log File Results</h2>
+            <h2 class="section-title-ai">Results</h2>
 
             <div id="warningMessage" class="warning-message">
                 <p class="warning-title">
                     <span class="warning-star">****</span><span class="warning-exclamation">!!!!</span><span class="warning-word">WARNING</span><span class="warning-exclamation">!!!!</span><span class="warning-star">****</span>
                 </p>
                 <p class="warning-detail-text">
-                    Root Kit Detection Software results can show false positives. It is up to the user to research, educate, and determine the validity of the results of scans.
+                    Rootkit Detection Software can reveal false positives.<br>
+                    It is up to the user to research and make educated assessments on the results of its scans.
                 </p>
             </div>
 
             <div id="analysisLoading" class="loading-indicator hidden">
                 <div class="spinner"></div>
-                <span>Analyzing rkhunter log...</span>
+                <span>Analyzing log file...</span>
             </div>
 
             <div id="analysisResult" class="analysis-result-display">
-                Your rkhunter analysis results will appear here after uploading a log file.
-            </div>
-        </section>
+                Your detection software log analysis results will appear here after uploading a log file.
+            </p>
+        </div>
     </main>
 
-    <script type="module" src="../Scripts/AIAssistantPage/rkhunter-ai-assistant.js"></script>
+    <!-- Script tag now points to the new file name -->
+    <script type="module" src="../Scripts/AIAssistantPage/rootkit-ai-assistant.js"></script>
 
     <footer class="site-footer-ai">
         <p>&copy; 2025 Jefe Way Offensive Security Company. All names, logos, and branding are reserved and may not be used without explicit authorization.</p>
